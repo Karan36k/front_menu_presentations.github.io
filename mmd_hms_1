@@ -1,0 +1,529 @@
+<html lang="sr" dir="ltr">
+  <head>
+      <title>Home</title>
+      
+      <style>
+      body {
+  margin: 0;
+  background-color: #292929;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#main {
+  transition: margin-left .5s;
+  margin-left: 210px;
+}
+
+#main2 {
+    margin-left: 230px;
+}
+
+.navbar {
+  background: #1a1a1a;
+  padding: 15px;
+  opacity: 0.9;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: gray;
+}
+
+.search {
+  background: #2b2b2b;
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.search input {
+  height: 25px;
+  background: #2b2b2b;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.profilenot {
+  font-size: 25px;
+}
+
+.icons {
+  font-size: 25px;
+  float: right;
+}
+
+.icons-hover a {
+  padding: 18px;
+  margin-right: 50px;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.icons-hover a:hover {
+  background: gray;
+  color: white;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+
+/* Tooltips */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 15px;
+
+  margin-top: 30px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
+.tooltip2 .tooltiptext2 {
+  visibility: hidden;
+  width: 120px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 15px;
+
+  margin-top: 30px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.tooltip2:hover .tooltiptext2 {
+  visibility: visible;
+}
+/* ------------------------- */
+
+.open {
+  color: gray;
+  margin-right: 50px;
+  border-radius: 50%;
+  padding: 18px;
+  transition: 0.5s;
+}
+
+.open:hover {
+  background: gray;
+  color: white;
+}
+
+
+.profile {
+  float: right;
+}
+
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+
+/* Notifications */
+#nottifications {
+  width: 80%;
+  background-color: #1a1a1a;
+  margin-top: 20px;
+  overflow-y: hidden;
+  height: 450px;
+  transition: 0.2s;
+  display: none;
+  opacity: 0.9;
+  border: solid 1px gray;
+  position: absolute;
+}
+
+.nottitle {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  height: 30px;
+  color: white;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+.nottitle p {
+  margin-left: 15px;
+}
+
+.notifications {
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.notifications:hover {
+  overflow-y: scroll;
+}
+
+/* ---------------- Sidebar ------------------ */
+.sidebar1 {
+  background: #1a1a1a;
+  position: fixed;
+  font-family: sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 210px;
+}
+
+.sidebar1 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  padding: 0;
+}
+
+.sidebar1 .closebtn:hover {
+  color: white;
+  background: #1a1a1a;
+}
+
+.sidebar1 a {
+  text-decoration: none;
+  color: gray;
+  padding: 12px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar1 a:hover {
+  color: white;
+  background: gray;
+}
+
+.sidebar1 i {
+  padding-right: 12px;
+}
+
+#last {
+  border-bottom: solid #292929 1px;
+}
+
+#first {
+  margin-top: 50px;
+  background-color: gray;
+  color: white;
+  margin-top: 75px;
+}
+
+
+#profile {
+  width: 35%;
+  background-color: #1a1a1a;
+  margin-top: 20px;
+  overflow-y: hidden;
+  height: 350px;
+  transition: 0.2s;
+  display: none;
+  opacity: 0.9;
+  border: solid 1px gray;
+  position: absolute;
+}
+
+#proifle a:hover {
+    background: none;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
+
+#profile a {
+  text-decoration: none;
+  color: gray;
+  padding: 12px;
+  display: block;
+  transition: 0.3s;
+}
+
+#profile a:hover {
+  color: white;
+  background: gray;
+}
+
+#profile i {
+  padding-right: 12px;
+}
+
+
+.profilna {
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.profilna:hover {
+    cursor: pointer;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+      
+    <meta charset="utf-8">
+    <meta name="author" content="Raakado Technologies">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    
+    <script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+
+ <div id='main'>
+     
+ <!-- Sidebar -->
+        <div id="Sidebar11" class="sidebar1">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
+          <a id="first" href="#"><i class="fas fa-home"></i>Home</a>
+          <a href=""><i class="fas fa-fire"></i>Trending</a>
+          <a href="#"><i class="fas fa-history"></i>History</a>
+          <a id="last" href="#"><i class="fas fa-plus"></i>Upload video</a>
+        </div>
+        
+        <!-- Navbar -->
+    <div class="navbar">
+
+      <div class="icons">
+          
+          <div class="icons-hover">
+
+        <span class="open" style="font-size:30px;cursor:pointer;" onclick="openSide()">&#9776;</span>
+
+<a onclick="openNotifications()" href="javascript:void(0)"><i class="fas fa-bell"></i></a>
+
+<div class="tooltip">
+<a onclick="openProfile()"><i class="fas fa-user"></i></a>
+<span class="tooltiptext">Profile</span>
+</div>
+
+</div>
+
+<div class="profilenot">
+              <div id="nottifications">
+        <div class="nottitle">
+          <p>Notifications</p>
+        </div>
+
+        <div class="notifications">
+            
+            
+        </div>
+      </div>
+      
+      <div id="profile">
+          <a href="#"><i class="fas fa-user-circle"></i>Profile</a>
+           <a href="@"><i class="fab fa-shopify"></i>Purchases and memberships</a>
+           <a href="#"><i class="fas fa-users-cog"></i>Edit profile</a>
+           <a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+      </div>
+    </div>
+
+      
+      </div>
+      
+            <form autocomplete="off" action="searchpage.php" method="post" class="search">
+        <input type="search" name="search" id='txtName' value="" placeholder="Search..."/>
+        <i style="color:gray;" class="fas fa-search"></i>
+      </form>
+      
+      
+    </div>
+   
+   <h2>Click 2 times on notification or profile button to display div</h2>
+    
+    
+
+<!-- main end -->
+</div>
+
+<div id="snackbar">Otvorili ste sidebar</div>
+
+ <script>
+ 
+    function openSide() {
+
+      document.getElementById("Sidebar11").style.width = "210px";
+
+      document.getElementById("main").style.marginLeft = "210px";
+      
+      document.getElementById("Sidebar11").style.background = "#1a1a1a";
+      
+    }
+
+    function closeSide() {
+
+      document.getElementById("Sidebar11").style.width = "0";
+
+      document.getElementById("main").style.marginLeft = "0";
+      
+      document.getElementById("Sidebar11").style.background = "gray";
+    }
+
+  <!-- notifications -->
+  function openNotifications() {
+    var x =
+    document.getElementById("nottifications");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
+      var cip = $(".video").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {  
+    $('video', this).get(0).play(); 
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause(); 
+}
+
+  function openProfile() {
+    var x =
+    document.getElementById("profile");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
+  function openProfile() {
+    var x =
+    document.getElementById("profile");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  
+function goBack() {
+  window.history.back()
+}
+
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+</html>
